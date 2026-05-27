@@ -1,0 +1,22 @@
+# OS
+.DS_Store
+
+# Java
+*.class
+bin/
+target/
+.settings/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json

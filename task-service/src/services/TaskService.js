@@ -1,0 +1,40 @@
+const Task =
+  require('../models/Task');
+
+class TaskService {
+
+  async createTask(data) {
+
+    const task =
+      new Task(data);
+
+    return await task.save();
+  }
+
+  async getTasks() {
+
+    return await Task.find();
+  }
+
+  async updateTask(id, data) {
+
+    return await Task.findByIdAndUpdate(
+
+      id,
+
+      data,
+
+      {
+        new: true
+      }
+    );
+  }
+
+  async deleteTask(id) {
+
+    return await Task.findByIdAndDelete(id);
+  }
+}
+
+module.exports =
+  new TaskService();
